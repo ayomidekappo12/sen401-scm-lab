@@ -1,19 +1,26 @@
 # app.py - entry point that runs the demo application
-from students import students, average_score, add_student
+from students import students, add_student, print_report
 from utils.helpers import highest_score, lowest_score
 
 
 def main():
-    print("=== Student Records Demo ===")
+    print("=" * 31)
+    print("   STUDENT RECORDS REPORT")
+    print("=" * 31)
     add_student("Chidi", 74)
 
-    print("All students:", students)
-    print("Average score:", average_score(students))
+    print_report(students)
 
     top = highest_score(students)
     bottom = lowest_score(students)
-    print("Highest:", top["name"], top["score"])
-    print("Lowest:", bottom["name"], bottom["score"])
+    print(f"{'Highest':<16}: {top['name']} ({top['score']})")
+    print(f"{'Lowest':<16}: {bottom['name']} ({bottom['score']})")
+
+    # Demonstrate validation: an invalid score is rejected cleanly
+    try:
+        add_student("Bad Data", 150)
+    except ValueError as err:
+        print(f"\nRejected invalid input -> {err}")
 
 
 if __name__ == "__main__":
