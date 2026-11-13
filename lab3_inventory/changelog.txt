@@ -1,0 +1,5 @@
+7dd3479 | ayomide kappo | 2026-11-13 09:16:29 +0000 | Lab 3 refactor(preventive): split into documented functions, add docstrings
+8c16119 | ayomide kappo | 2026-11-13 09:16:29 +0000 | Lab 3 feat(perfective): formatted stock table with Naira currency and status
+0c6006c | ayomide kappo | 2026-11-13 09:16:29 +0000 | Lab 3 feat(adaptive): migrate to Python 3.12 dataclasses + add low-stock alert
+4124e58 | ayomide kappo | 2026-11-13 09:16:28 +0000 | Lab 3 fix(corrective): use quantity*price for stock value; lowest_stock_item uses min()
+b2563fa | ayomide kappo | 2026-11-13 09:16:28 +0000 | Lab 3: initial inventory project structure
